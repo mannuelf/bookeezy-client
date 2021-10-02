@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import { Text } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-
 import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
@@ -13,7 +13,7 @@ export default function App(): JSX.Element {
   if (!isLoadingComplete) {
     return (
       <SafeAreaProvider>
-        <div>Loading...</div>
+        <Text>Loading...</Text>
       </SafeAreaProvider>
     );
   } else {
