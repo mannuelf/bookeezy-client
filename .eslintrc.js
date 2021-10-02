@@ -17,5 +17,20 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],
   plugins: ['react', 'react-hooks', '@typescript-eslint', 'prettier'],
-  rules: {},
+  rules: {
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+  },
+  overrides: [
+    {
+      files: ['*.tsx'],
+      rules: {
+        '@typescript-eslint/explicit-module-boundary-types': ['error'],
+      },
+    },
+  ],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
 };
