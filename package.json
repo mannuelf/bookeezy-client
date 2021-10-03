@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --fix --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --check .",
-    "generate": "graphql-codegen --config codegen.yml"
+    "generate:types": "graphql-codegen --config codegen.yml"
   },
   "jest": {
     "preset": "jest-expo"
@@ -38,12 +38,17 @@
     "react-native-safe-area-context": "3.2.0",
     "react-native-screens": "~3.4.0",
     "react-native-web": "~0.13.12",
+    "react-query": "^3.25.0",
     "react-redux": "^7.2.5"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@graphql-codegen/cli": "2.2.0",
+    "@graphql-codegen/introspection": "2.1.0",
     "@graphql-codegen/typescript": "2.2.2",
+    "@graphql-codegen/typescript-operations": "2.1.5",
+    "@graphql-codegen/typescript-react-apollo": "3.1.4",
+    "@graphql-codegen/urql-introspection": "2.1.0",
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
     "@typescript-eslint/eslint-plugin": "^4.32.0",
@@ -59,11 +64,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "jest-expo": "~41.0.0-beta.0",
     "prettier": "^2.4.1",
-    "typescript": "~4.0.0",
-    "@graphql-codegen/typescript-operations": "2.1.5",
-    "@graphql-codegen/typescript-react-apollo": "3.1.4",
-    "@graphql-codegen/urql-introspection": "2.1.0",
-    "@graphql-codegen/introspection": "2.1.0"
+    "typescript": "~4.0.0"
   },
   "private": true
 }
