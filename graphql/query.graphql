@@ -1,0 +1,6 @@
+query loginUser {
+  login {
+    email
+    password
+  }
+}
