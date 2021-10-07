@@ -15,6 +15,7 @@ export default function useCachedResources(): boolean {
         // Load fonts
         await Font.loadAsync({
           ...FontAwesome.font,
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
           'space-mono': require('../assets/fonts/SpaceMono-Regular.ttf'),
         });
       } catch (e) {
