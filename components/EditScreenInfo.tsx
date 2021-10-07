@@ -6,7 +6,7 @@ import Colors from '../constants/Colors';
 import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
 
-export default function EditScreenInfo({ path }: { path: string }) {
+export default function EditScreenInfo({ path }: { path: string }): JSX.Element {
   return (
     <View>
       <View style={styles.getStartedContainer}>
@@ -35,7 +35,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
       <View style={styles.helpContainer}>
         <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
           <Text style={styles.helpLinkText} lightColor={Colors.light.tint}>
-            Tap here if your app doesn't automatically update after making changes
+            Tap here if your app doesn&apos;t automatically update after making changes
           </Text>
         </TouchableOpacity>
       </View>
@@ -43,9 +43,10 @@ export default function EditScreenInfo({ path }: { path: string }) {
   );
 }
 
-function handleHelpPress() {
+function handleHelpPress(): void {
+  // eslint-disable-next-line @typescript-eslint/no-floating-promises
   WebBrowser.openBrowserAsync(
-    'https://docs.expo.io/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet'
+    'https://docs.expo.io/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet',
   );
 }
 
